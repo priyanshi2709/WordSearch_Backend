@@ -17,7 +17,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true,
 var collection=null;
 
 //Idiomatic expression in express to route and respond to a client request
-app.get('/', (req, res) => {        //get requests to the root ("/") will route here
+app.get('/letters', (req, res) => {        //get requests to the root ("/") will route here
     client.connect(err => {
         console.log('Connected');
         collection = client.db("SectionWars").collection("HR A");
