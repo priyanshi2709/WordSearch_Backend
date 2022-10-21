@@ -20,7 +20,7 @@ var collection=null;
 app.get('/', (req, res) => {        //get requests to the root ("/") will route here
     client.connect(err => {
         console.log('Connected');
-        collection = client.db("SectionWars").collection("HR A");
+        collection = client.db("SectionWars").collection("grid");
       
       collection.find().toArray(function (err, docs) {
         //client.close();
